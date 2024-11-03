@@ -1,0 +1,18 @@
+// for changing background dynamically
+  const newBackgroundImage = routeBackgroundImages[location.pathname];
+      if (newBackgroundImage) {
+        dispatch(setBackgroundImage(newBackgroundImage));
+      }
+      const location=useLocation();
+    const routeBackgroundImages = {
+      '/': '../public/bg.jpg',
+      '/register': '../public/bg.jpg',
+      '/login': '../public/bg.jpg',
+      '/login': '../public/bgMsg.jpg',
+    };
+ setBackgroundImage:(state,action)=>{
+            state.backgroundImage=action.payload;
+        }
+
+
+<canvas style="display: block; width: 240px; height: 240px;" data-engine="three.js r149" width="330" height="330">
